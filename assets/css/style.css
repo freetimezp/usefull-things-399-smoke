@@ -9,3 +9,81 @@
 a {
     text-decoration: none;
 }
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+ul {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+ul li {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #262626;
+    border-radius: 50%;
+}
+
+ul li:nth-child(even) {
+    animation: animationEven 2.8s linear infinite;
+}
+ul li:nth-child(odd) {
+    animation: animationOdd 2.8s linear infinite;
+}
+
+@keyframes animationEven {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+        filter: blur(5px);
+    }
+    100% {
+        transform: translate(100px, -500px) scale(3);
+        opacity: 0;
+        filter: blur(10px);
+    }
+}
+@keyframes animationOdd {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+        filter: blur(5px);
+    }
+    100% {
+        transform: translate(-100px, -500px) scale(3);
+        opacity: 0;
+        filter: blur(10px);
+    }
+}
+
+ul li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+ul li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+ul li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+ul li:nth-child(4) {
+    animation-delay: 0.8s;
+}
+ul li:nth-child(5) {
+    animation-delay: 1s;
+}
+ul li:nth-child(6) {
+    animation-delay: 1.2s;
+}
+ul li:nth-child(7) {
+    animation-delay: 1.4s;
+}
+ul li:nth-child(8) {
+    animation-delay: 1.6s;
+}
